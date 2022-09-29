@@ -1,7 +1,7 @@
 import { css } from '@emotion/css';
-import { t } from '@lingui/macro';
 import { debounce } from 'lodash';
 import React, { useState, useEffect, useMemo, useCallback, FormEvent } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useAsync } from 'react-use';
 
 import { AppEvents, SelectableValue, GrafanaTheme2 } from '@grafana/data';
@@ -78,6 +78,7 @@ export function FolderPicker(props: Props) {
     folderWarning,
   } = props;
 
+  const { t } = useTranslation();
   const [folder, setFolder] = useState<SelectedFolder | null>(null);
   const [isCreatingNew, setIsCreatingNew] = useState(false);
   const [inputValue, setInputValue] = useState('');
@@ -326,7 +327,7 @@ export function FolderPicker(props: Props) {
         <AsyncSelect
           inputId={inputId}
           aria-label={selectors.components.FolderPicker.input}
-          loadingMessage={t({ id: 'folder-picker.loading', message: 'Loading folders...' })}
+          loadingMessage={t('folder-picker.loading', 'Loading folders...')}
           defaultOptions
           defaultValue={folder}
           inputValue={inputValue}

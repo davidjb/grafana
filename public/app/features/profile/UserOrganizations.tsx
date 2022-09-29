@@ -1,5 +1,5 @@
-import { Trans } from '@lingui/macro';
 import React, { PureComponent } from 'react';
+import { Trans } from 'react-i18next';
 
 import { selectors } from '@grafana/e2e-selectors';
 import { Button, LoadingPlaceholder } from '@grafana/ui';
@@ -27,7 +27,7 @@ export class UserOrganizations extends PureComponent<Props> {
     return (
       <div>
         <h3 className="page-sub-heading">
-          <Trans id="user-orgs.title">Organizations</Trans>
+          <Trans i18nKey="user-orgs.title">Organizations</Trans>
         </h3>
 
         <div className="gf-form-group">
@@ -35,10 +35,10 @@ export class UserOrganizations extends PureComponent<Props> {
             <thead>
               <tr>
                 <th>
-                  <Trans id="user-orgs.name-column">Name</Trans>
+                  <Trans i18nKey="user-orgs.name-column">Name</Trans>
                 </th>
                 <th>
-                  <Trans id="user-orgs.role-column">Role</Trans>
+                  <Trans i18nKey="user-orgs.role-column">Role</Trans>
                 </th>
                 <th />
               </tr>
@@ -52,7 +52,7 @@ export class UserOrganizations extends PureComponent<Props> {
                     <td className="text-right">
                       {org.orgId === user?.orgId ? (
                         <Button variant="secondary" size="sm" disabled>
-                          <Trans id="user-orgs.current-org-button">Current</Trans>
+                          <Trans i18nKey="user-orgs.current-org-button">Current</Trans>
                         </Button>
                       ) : (
                         <Button
@@ -62,7 +62,7 @@ export class UserOrganizations extends PureComponent<Props> {
                             this.props.setUserOrg(org);
                           }}
                         >
-                          <Trans id="user-orgs.select-org-button">Select organisation</Trans>
+                          <Trans i18nKey="user-orgs.select-org-button">Select organisation</Trans>
                         </Button>
                       )}
                     </td>

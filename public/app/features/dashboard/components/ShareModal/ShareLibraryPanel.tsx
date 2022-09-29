@@ -1,5 +1,5 @@
-import { Trans } from '@lingui/macro';
 import React, { useEffect } from 'react';
+import { Trans } from 'react-i18next';
 
 import { reportInteraction } from '@grafana/runtime/src';
 import { AddLibraryPanelContents } from 'app/features/library-panels/components/AddLibraryPanelModal/AddLibraryPanelModal';
@@ -22,7 +22,7 @@ export const ShareLibraryPanel = ({ panel, initialFolderId, onDismiss }: Props) 
   return (
     <>
       <p className="share-modal-info-text">
-        <Trans id="share-modal.library.info">Create library panel.</Trans>
+        <Trans i18nKey="share-modal.library.info">Create library panel.</Trans>
       </p>
       <AddLibraryPanelContents panel={panel} initialFolderId={initialFolderId} onDismiss={onDismiss!} />
     </>
