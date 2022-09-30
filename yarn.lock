@@ -4583,19 +4583,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cypress/webpack-preprocessor@npm:5.12.0":
-  version: 5.12.0
-  resolution: "@cypress/webpack-preprocessor@npm:5.12.0"
+"@cypress/webpack-preprocessor@npm:5.13.0":
+  version: 5.13.0
+  resolution: "@cypress/webpack-preprocessor@npm:5.13.0"
   dependencies:
     bluebird: 3.7.1
     debug: ^4.3.2
+    fs-extra: ^10.1.0
+    loader-utils: ^2.0.0
     lodash: ^4.17.20
+    webpack-virtual-modules: ^0.4.4
   peerDependencies:
     "@babel/core": ^7.0.1
     "@babel/preset-env": ^7.0.0
     babel-loader: ^8.0.2
     webpack: ^4 || ^5
-  checksum: 3fa209655412369eb5bf0e8e0eaf25c89f0dfc6937d9aa4c51aa351449cf3d56b1834908dc81e507eb3d6508fee8534769b576f46f26034220a9f3f82ed7b3f8
+  checksum: 03b133dcf84993494151ae047921bf443a9cd303d668ad6f70aa841bf3f9b3550d056457aab28bf49287795ee68ba20c524398faf296147bd7a06a749eb1c201
   languageName: node
   linkType: hard
 
@@ -5317,7 +5320,7 @@ __metadata:
   dependencies:
     "@babel/core": 7.19.0
     "@babel/preset-env": 7.19.0
-    "@cypress/webpack-preprocessor": 5.12.0
+    "@cypress/webpack-preprocessor": 5.13.0
     "@grafana/e2e-selectors": 9.3.0-pre
     "@grafana/tsconfig": ^1.2.0-rc1
     "@mochajs/json-file-reporter": ^1.2.0
@@ -38846,6 +38849,13 @@ __metadata:
   version: 0.4.3
   resolution: "webpack-virtual-modules@npm:0.4.3"
   checksum: 158d30633e0d9be3cfcde10fe959b28df5d5adb1068e0f057fcfb10b0b16ede6c892eba438f6ced089c7c442087748c2fcd1e3f035e4e2dc6760517a8c227714
+  languageName: node
+  linkType: hard
+
+"webpack-virtual-modules@npm:^0.4.4":
+  version: 0.4.5
+  resolution: "webpack-virtual-modules@npm:0.4.5"
+  checksum: 0ae9a8b50d0cb1e43da5ff8acaa7b99c34a42f0d6cc83a82908fb6e131e574a949d19948df4fdd3de0dbfdbadb2b93ceb4a740c55727a4236eb3b2bbc8f785a6
   languageName: node
   linkType: hard
 
